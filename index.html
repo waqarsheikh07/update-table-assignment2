@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link
+      rel="icon"
+      href="https://ph-files.imgix.net/f513d4e9-76d4-4073-b57b-e642296ce2a1.gif"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/index.js"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Assignment2</title>
+  </head>
+  <body>
+    <p class="heading-record">List of Persons</p>
+    <div id="container">
+      <table id="person-table">
+        <thead>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>Action</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <form autocomplete="off" action="" id="myform">
+        <label for="heading" class="heading">Add / Upadate Person Form</label>
+        <input type="text" id="name" placeholder="Name" />
+        <div class="gender">
+          <div class="gender-male">
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="male">Male</label>
+          </div>
+
+          <div class="gender-female">
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="female">Female</label>
+          </div>
+        </div>
+
+        <input type="number" id="age" placeholder="Age" />
+        <div class="city-container">
+          <label for="city">City:</label>
+          <select name="city-name" id="city-op">
+            <option value="lahore">Lahore</option>
+            <option value="islamabad">Islamabad</option>
+            <option value="karachi">Karachi</option>
+            <option value="peshawer">Peshawer</option>
+            <option value="sialkot">Sialkot</option>
+          </select>
+        </div>
+
+        <div class="btn">
+          <button id="reset" type="reset">reset</button>
+          <button id="add" type="button">add</button>
+          <button id="update" type="button">update</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

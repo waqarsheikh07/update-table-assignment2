@@ -12,7 +12,7 @@ body {
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
   );
-  background-repeat: repeat-y;
+  background-repeat: repeat;
 }
 .heading-record {
   width: calc(100% - 40px);
@@ -196,6 +196,7 @@ input[type="radio"]:checked {
   width: calc(100% - 40px);
   margin: 40px 20px;
 }
+
 .city-container label,
 #city-op {
   flex-basis: calc(20% - 80px);
@@ -278,6 +279,51 @@ select:focus {
     flex-basis: 40%;
   }
   table {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .heading-record {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+  }
+  .heading {
+    font-size: 1.2em;
+  }
+  form {
+    flex-basis: 80%;
+    flex-grow: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  table {
+    flex-grow: 0;
+
+    font-size: 0.8rem;
+  }
+  .btn {
+    flex-wrap: nowrap;
+  }
+  .btn button {
+    font-size: 1rem;
+  }
+  input[type="text"],
+  input[type="number"],
+  .city-container label,
+  #city-op,
+  .gender-male,
+  .gender-female {
+    font-size: 1rem;
+  }
+  .gender-male,
+  .gender-female {
+    margin: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  table {
+    font-size: 0.65rem;
     flex-grow: 1;
   }
 }

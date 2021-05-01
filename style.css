@@ -306,6 +306,7 @@ select:focus {
   }
   .btn button {
     font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   input[type="text"],
   input[type="number"],
@@ -314,6 +315,7 @@ select:focus {
   .gender-male,
   .gender-female {
     font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   .gender-male,
   .gender-female {

@@ -1,7 +1,6 @@
 $(() => {
   $("#add").click(insertion_record);
   $("#reset").click(reset_record);
-  //   $("#update").prop("disabled", false);
 
   $("#update").click(set_update);
   $("#person-table").on("click", "#remove-person", remove_record);
@@ -51,7 +50,12 @@ function set_update() {
 
   person = `name:${name} gender:${gender} age:${age}city${city}`;
 
-  var flag = isAlpha(name) && isAgeLimit(age) && gender && name.length <= 10;
+  var flag =
+    isAlpha(name) &&
+    letterUPcaseOrLOcase(name) &&
+    isAgeLimit(age) &&
+    gender &&
+    name.length <= 10;
   if (!flag) {
     alert("  characters limit < 10 \n 10 < age < 50\n fill complete");
     return;
@@ -88,9 +92,16 @@ function insertion(id) {
 
   person = `name:${name} gender:${gender} age:${age}city${city}`;
 
-  var flag = isAlpha(name) && isAgeLimit(age) && gender && name.length <= 10;
+  var flag =
+    isAlpha(name) &&
+    letterUPcaseOrLOcase(name) &&
+    isAgeLimit(age) &&
+    gender &&
+    name.length <= 10;
   if (!flag) {
-    alert("  characters limit < 10 \n 10 < age < 50\n fill complete");
+    alert(
+      " characters upCase or lowCase\n characters limit < 10 \n 10 < age < 50\n fill complete"
+    );
     return;
   }
   var action = `<button type="button" id="update-row">Update</button>/<button type="button" id="remove-person">Remove</button>`;
@@ -127,4 +138,11 @@ function isAgeLimit(value) {
   } else {
     return false;
   }
+}
+function letterUPcaseOrLOcase(name) {
+  if (name == name.toUpperCase() || name == name.toLowerCase()) {
+    console.log("hi");
+    return true;
+  }
+  return false;
 }

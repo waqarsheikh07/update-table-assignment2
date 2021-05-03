@@ -10,7 +10,6 @@ $(document).ready(function () {
   $("#update").prop("disabled", true);
 });
 function insertion_record() {
-  $("#update").prop("disabled", false);
   insertion(Date.now());
 }
 
@@ -41,6 +40,7 @@ function update_record() {
 }
 function set_update() {
   $("#add").prop("disabled", false);
+  $("#update").prop("disabled", false);
   console.log(window.tr_id + "hi");
   var table_body = $("#person-table tbody");
   var name = $("#name").val();

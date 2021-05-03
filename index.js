@@ -15,6 +15,7 @@ function insertion_record() {
 
 function update_record() {
   $("#add").prop("disabled", true);
+  $("#update").prop("disabled", false);
 
   var btn = $(this);
   var getRow = btn.closest("tr");
@@ -40,7 +41,7 @@ function update_record() {
 }
 function set_update() {
   $("#add").prop("disabled", false);
-  $("#update").prop("disabled", false);
+
   console.log(window.tr_id + "hi");
   var table_body = $("#person-table tbody");
   var name = $("#name").val();

@@ -301,6 +301,8 @@ select:focus {
 
     font-size: 0.8rem;
   }
+  #col-5 {
+  }
   .btn {
     flex-wrap: nowrap;
   }

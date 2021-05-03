@@ -123,6 +123,7 @@ function get_parent(child, prent, refrence) {
 // Function to check letters and numbers
 function isAlpha(value) {
   //alert(inputtxt);
+  value = value.split(" ").join("");
   var letters = /^[a-zA-Z]+$/;
   if (value.match(letters)) {
     return true;
@@ -141,6 +142,7 @@ function isAgeLimit(value) {
   }
 }
 function letterUPcaseOrLOcase(name) {
+  name = name.split(" ").join("");
   if (name == name.toUpperCase() || name == name.toLowerCase()) {
     console.log("hi");
     return true;
